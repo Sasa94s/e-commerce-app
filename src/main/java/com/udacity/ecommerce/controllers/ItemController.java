@@ -3,6 +3,7 @@ package com.udacity.ecommerce.controllers;
 import java.util.List;
 
 import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +15,10 @@ import com.udacity.ecommerce.model.persistence.Item;
 
 @RestController
 @RequestMapping("/api/item")
+@RequiredArgsConstructor
 public class ItemController {
 
-	@Autowired
-	private ItemRepository itemRepository;
+	private final ItemRepository itemRepository;
 	
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {

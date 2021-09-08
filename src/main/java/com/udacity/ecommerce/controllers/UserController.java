@@ -1,6 +1,7 @@
 package com.udacity.ecommerce.controllers;
 
 import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +19,11 @@ import com.udacity.ecommerce.model.requests.CreateUserRequest;
 
 @RestController
 @RequestMapping("/api/user")
+@RequiredArgsConstructor
 public class UserController {
 	
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Autowired
-	private CartRepository cartRepository;
+	private final UserRepository userRepository;
+	private final CartRepository cartRepository;
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {

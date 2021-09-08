@@ -5,6 +5,7 @@ import java.util.stream.IntStream;
 
 import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
 import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,16 +22,12 @@ import com.udacity.ecommerce.model.requests.ModifyCartRequest;
 
 @RestController
 @RequestMapping("/api/cart")
+@RequiredArgsConstructor
 public class CartController {
 	
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Autowired
-	private CartRepository cartRepository;
-	
-	@Autowired
-	private ItemRepository itemRepository;
+	private final UserRepository userRepository;
+	private final CartRepository cartRepository;
+	private final ItemRepository itemRepository;
 	
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
