@@ -1,24 +1,20 @@
 package com.udacity.ecommerce.controllers;
 
-import java.util.List;
-
+import com.udacity.ecommerce.model.persistence.User;
+import com.udacity.ecommerce.model.persistence.UserOrder;
 import com.udacity.ecommerce.model.persistence.repositories.OrderRepository;
 import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.udacity.ecommerce.model.persistence.User;
-import com.udacity.ecommerce.model.persistence.UserOrder;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/order")
 @RequiredArgsConstructor
+@Slf4j
 public class OrderController {
 
 	private final UserRepository userRepository;
@@ -26,21 +22,29 @@ public class OrderController {
 
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
+        log.info("Submit|Request=(Username={})", username);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
+            log.error("Submit|Response|{} User doesn't exist", username);
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
-		orderRepository.save(order);
+        orderRepository.save(order);
+        log.info("Submit|Response={}", order);
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
-			return ResponseEntity.notFound().build();
-		}
-		return ResponseEntity.ok(orderRepository.findByUser(user));
-	}
+        log.info("GetOrdersForUser|Request=(Username={})", username);
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            log.error("GetOrdersForUser|Response|{} User doesn't exist", username);
+            return ResponseEntity.notFound().build();
+        }
+
+        List<UserOrder> userOrders = orderRepository.findByUser(user);
+        log.info("Submit|Response=[Count={}]", userOrders.size());
+        return ResponseEntity.ok(userOrders);
+    }
 }

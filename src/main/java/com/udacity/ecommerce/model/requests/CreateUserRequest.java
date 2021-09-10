@@ -2,10 +2,7 @@ package com.udacity.ecommerce.model.requests;
 
 import com.udacity.ecommerce.security.validator.annotation.PasswordValueMatch;
 import com.udacity.ecommerce.security.validator.annotation.ValidPassword;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 
@@ -20,6 +17,7 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class CreateUserRequest {
 
     @NotBlank(message = "username is mandatory")

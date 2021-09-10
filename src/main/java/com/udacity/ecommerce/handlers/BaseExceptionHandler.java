@@ -1,5 +1,6 @@
 package com.udacity.ecommerce.handlers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -11,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
+@Slf4j
 public class BaseExceptionHandler {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -18,11 +20,14 @@ public class BaseExceptionHandler {
     public ResponseEntity<HashMap<String, Object>> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
         ex.getBindingResult().getFieldErrors().forEach(error -> {
+                    String message;
                     if (errors.containsKey(error.getField())) {
-                        errors.put(error.getField(), String.format("%s, %s", errors.get(error.getField()), error.getDefaultMessage()));
+                        message = String.format("%s, %s", errors.get(error.getField()), error.getDefaultMessage());
                     } else {
-                        errors.put(error.getField(), error.getDefaultMessage());
+                        message = error.getDefaultMessage();
                     }
+                    errors.put(error.getField(), message);
+                    log.error(message, ex);
                 }
         );
         return new ResponseEntity<>(

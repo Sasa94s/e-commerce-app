@@ -6,15 +6,18 @@ import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
 import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
 import com.udacity.ecommerce.model.requests.CreateUserRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/user")
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
 	private final UserRepository userRepository;
@@ -22,17 +25,32 @@ public class UserController {
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
-		return ResponseEntity.of(userRepository.findById(id));
+		log.info("FindById|Request=(ID={})", id);
+		Optional<User> optionalUser = userRepository.findById(id);
+		if (!optionalUser.isPresent()) {
+			log.error("FindById|Response|User #{} doesn't exist", id);
+			return ResponseEntity.notFound().build();
+		}
+		User user = optionalUser.get();
+		log.info("FindById|Response={}", user);
+		return ResponseEntity.ok(user);
 	}
 
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
+		log.info("FindByUsername|Request=(Username={})", username);
 		User user = userRepository.findByUsername(username);
-		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
+		if (user == null) {
+			log.error("FindByUserName|Response|{} User doesn't exist", username);
+			return ResponseEntity.notFound().build();
+		}
+		log.info("FindByUserName|Response={}", user);
+		return ResponseEntity.ok(user);
 	}
 
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@Valid @RequestBody CreateUserRequest createUserRequest) {
+		log.info("CreateUser|Request={}", createUserRequest);
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		String salt = BCrypt.gensalt();
@@ -43,6 +61,7 @@ public class UserController {
 		cartRepository.save(cart);
 		user.setCart(cart);
 		userRepository.save(user);
+		log.info("CreateUser|Response={}", user);
 		return ResponseEntity.ok(user);
 	}
 	
