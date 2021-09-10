@@ -13,13 +13,14 @@ import java.math.BigDecimal;
 @Table(name = "item")
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 public class Item {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
+	@EqualsAndHashCode.Include
 	private Long id;
 	
 	@Column(nullable = false)
