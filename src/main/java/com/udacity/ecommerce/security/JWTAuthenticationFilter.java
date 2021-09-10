@@ -1,6 +1,5 @@
 package com.udacity.ecommerce.security;
 
-import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.udacity.ecommerce.model.persistence.User;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,18 +14,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 
-import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
-
-//@WebFilter(filterName = "JWTAuthenticationFilter", urlPatterns = SecurityConstants.LOGIN_URL)
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private final AuthenticationManager authenticationManager;
+    private final JWTService jwtService;
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, JWTService jwtService) {
         setFilterProcessesUrl(SecurityConstants.LOGIN_URL);
         this.authenticationManager = authenticationManager;
+        this.jwtService = jwtService;
     }
 
     @Override
@@ -51,11 +48,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                                             HttpServletResponse res,
                                             FilterChain chain,
                                             Authentication auth) {
-
-        String token = JWT.create()
-                .withSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
-                .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
-                .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
+        String username = ((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername();
+        String token = jwtService.createToken(username);
         res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
     }
 
