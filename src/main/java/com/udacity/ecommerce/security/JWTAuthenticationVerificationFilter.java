@@ -30,9 +30,13 @@ public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilt
             return;
         }
 
-        Authentication authentication = jwtService.getAuthentication(token);
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        chain.doFilter(req, res);
+        try {
+            Authentication authentication = jwtService.getAuthentication(token);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            chain.doFilter(req, res);
+        } catch (Exception e) {
+            res.sendError(500);
+        }
     }
 
 }

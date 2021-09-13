@@ -1,6 +1,5 @@
 package com.udacity.ecommerce.security;
 
-import com.udacity.ecommerce.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -18,7 +18,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final JWTService jwtService;
     private final PasswordEncoder passwordEncoder;
-    private final UserDetailsServiceImpl userDetailsService;
+    private final UserDetailsService userDetailsService;
 
     @Override
     public void configure(WebSecurity webSecurity) {
