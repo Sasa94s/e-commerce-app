@@ -2,7 +2,6 @@ package com.udacity.ecommerce.controllers;
 
 import com.udacity.ecommerce.model.persistence.Cart;
 import com.udacity.ecommerce.model.persistence.User;
-import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
 import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
 import com.udacity.ecommerce.model.requests.CreateUserRequest;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +20,6 @@ import java.util.Optional;
 public class UserController {
 
 	private final UserRepository userRepository;
-	private final CartRepository cartRepository;
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -51,18 +49,23 @@ public class UserController {
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@Valid @RequestBody CreateUserRequest createUserRequest) {
 		log.info("CreateUser|Request={}", createUserRequest);
-		User user = new User();
-		user.setUsername(createUserRequest.getUsername());
+		String username = createUserRequest.getUsername();
+		User userFound = userRepository.findByUsername(username);
+		if (userFound != null) {
+			log.error("CreateUser|Response|{} User already exists", username);
+			return ResponseEntity.badRequest().build();
+		}
+
 		String salt = BCrypt.gensalt();
-		String encryptedPassword = BCrypt.hashpw(createUserRequest.getPassword(), salt);
-		user.setSalt(salt);
-		user.setPassword(encryptedPassword);
-		Cart cart = new Cart();
-		cartRepository.save(cart);
-		user.setCart(cart);
-		userRepository.save(user);
-		log.info("CreateUser|Response={}", user);
-		return ResponseEntity.ok(user);
+		User user = User.builder()
+				.username(username)
+				.salt(salt)
+				.password(BCrypt.hashpw(createUserRequest.getPassword(), salt))
+				.cart(new Cart())
+				.build();
+		User savedUser = userRepository.save(user);
+		log.info("CreateUser|Response={}", savedUser);
+		return ResponseEntity.ok(savedUser);
 	}
 	
 }
