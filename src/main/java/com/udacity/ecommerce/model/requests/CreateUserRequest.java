@@ -18,6 +18,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 @ToString
+@Builder
 public class CreateUserRequest {
 
     @NotBlank(message = "username is mandatory")

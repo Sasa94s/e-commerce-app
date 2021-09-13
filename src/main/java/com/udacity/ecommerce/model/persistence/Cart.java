@@ -1,20 +1,23 @@
 package com.udacity.ecommerce.model.persistence;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "cart")
 @Getter
 @Setter
 @ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Cart {
 	
 	@Id
@@ -30,8 +33,8 @@ public class Cart {
 	private List<Item> items;
 
 	@OneToOne(mappedBy = "cart")
+	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	@JsonProperty
-	@ToString.Exclude
 	private User user;
 	
 	@Column
@@ -48,15 +51,30 @@ public class Cart {
 		}
 		total = total.add(item.getPrice());
 	}
-	
+
 	public void removeItem(Item item) {
-		if(items == null) {
+		if (items == null) {
 			items = new ArrayList<>();
 		}
 		items.remove(item);
-		if(total == null) {
+		if (total == null) {
 			total = new BigDecimal(0);
 		}
 		total = total.subtract(item.getPrice());
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+		Cart cart = (Cart) o;
+		if (user == null || cart.user == null) return false;
+
+		return Objects.equals(user, cart.user);
+	}
+
+	@Override
+	public int hashCode() {
+		return getClass().hashCode();
 	}
 }
