@@ -30,24 +30,25 @@ public class CartController {
 	private final ItemRepository itemRepository;
 
 	@PostMapping("/addToCart")
-	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
+	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
 		log.info("AddToCart|Request={}", request);
 		User user = userRepository.findByUsername(request.getUsername());
-		if(user == null) {
+		if (user == null) {
 			log.error("AddToCart|Response|{} User doesn't exist", request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
-		if(!item.isPresent()) {
+		if (!item.isPresent()) {
 			log.error("AddToCart|Response|Item #{} doesn't exist", request.getItemId());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
+		cart.setUser(user);
 		IntStream.range(0, request.getQuantity())
-			.forEach(i -> cart.addItem(item.get()));
-		cartRepository.save(cart);
-		log.info("AddToCart|Response={}", cart);
-		return ResponseEntity.ok(cart);
+				.forEach(i -> cart.addItem(item.get()));
+		Cart savedCart = cartRepository.save(cart);
+		log.info("AddToCart|Response={}", savedCart);
+		return ResponseEntity.ok(savedCart);
 	}
 
 	@PostMapping("/removeFromCart")
@@ -66,9 +67,9 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 				.forEach(i -> cart.removeItem(item.get()));
-		cartRepository.save(cart);
-		log.info("RemoveFromCart|Response={}", cart);
-		return ResponseEntity.ok(cart);
+		Cart savedCart = cartRepository.save(cart);
+		log.info("RemoveFromCart|Response={}", savedCart);
+		return ResponseEntity.ok(savedCart);
 	}
 		
 }

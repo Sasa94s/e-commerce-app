@@ -23,16 +23,16 @@ public class OrderController {
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
         log.info("Submit|Request=(Username={})", username);
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
             log.error("Submit|Response|{} User doesn't exist", username);
-			return ResponseEntity.notFound().build();
-		}
-		UserOrder order = UserOrder.createFromCart(user.getCart());
-        orderRepository.save(order);
-        log.info("Submit|Response={}", order);
-		return ResponseEntity.ok(order);
-	}
+            return ResponseEntity.notFound().build();
+        }
+        UserOrder order = UserOrder.createFromCart(user.getCart());
+        UserOrder savedOrder = orderRepository.save(order);
+        log.info("Submit|Response={}", savedOrder);
+        return ResponseEntity.ok(savedOrder);
+    }
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
