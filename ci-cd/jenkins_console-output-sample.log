@@ -1,0 +1,552 @@
+02:08:39 Started by user Mostafa Elsheikh
+02:08:39 Running as SYSTEM
+02:08:39 Building in workspace /var/jenkins_home/workspace/eCommerceJob
+02:08:39 [WS-CLEANUP] Deleting project workspace...
+02:08:39 [WS-CLEANUP] Deferred wipeout is used...
+02:08:39 [WS-CLEANUP] Done
+02:08:39 The recommended git tool is: NONE
+02:08:39 using credential 6cc209ab-7329-4d08-87cb-05279908fe98
+02:08:39 Cloning the remote Git repository
+02:08:39 Cloning repository https://github.com/Sasa94s/e-commerce-app
+02:08:39  > git init /var/jenkins_home/workspace/eCommerceJob # timeout=10
+02:08:39 Fetching upstream changes from https://github.com/Sasa94s/e-commerce-app
+02:08:39  > git --version # timeout=10
+02:08:39  > git --version # 'git version 2.32.0'
+02:08:39 using GIT_SSH to set credentials
+02:08:39  > git fetch --tags --force --progress -- https://github.com/Sasa94s/e-commerce-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+02:08:40  > git config remote.origin.url https://github.com/Sasa94s/e-commerce-app # timeout=10
+02:08:40  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+02:08:40 Avoid second fetch
+02:08:40  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+02:08:40 Checking out Revision 8a6caf26c248e6810f0b434e3d5420ffce9ea8af (refs/remotes/origin/master)
+02:08:40  > git config core.sparsecheckout # timeout=10
+02:08:40  > git checkout -f 8a6caf26c248e6810f0b434e3d5420ffce9ea8af # timeout=10
+02:08:40 Commit message: "refactor: add maven-surefire-plugin with jvm memory arg"
+02:08:40  > git rev-list --no-walk 8e840757d66235e22680d3ccfa2bfbd1b4f04eb3 # timeout=10
+02:08:40 [eCommerceJob] $ mvn -f pom.xml clean compile package
+02:08:42 [INFO] Scanning for projects...
+02:08:42 [INFO]
+02:08:42 [INFO] -----------------------< com.udacity:e-commerce >-----------------------
+02:08:42 [INFO] Building e-commerce 0.0.1-SNAPSHOT
+02:08:42 [INFO] --------------------------------[ war ]---------------------------------
+02:08:43 [INFO]
+02:08:43 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ e-commerce ---
+02:08:43 [INFO]
+02:08:43 [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ e-commerce ---
+02:08:44 [INFO] Using 'UTF-8' encoding to copy filtered resources.
+02:08:44 [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+02:08:44 [INFO] Copying 1 resource
+02:08:44 [INFO] Copying 2 resources
+02:08:44 [INFO]
+02:08:44 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ e-commerce ---
+02:08:44 [INFO] Changes detected - recompiling the module!
+02:08:44 [INFO] Compiling 29 source files to /var/jenkins_home/workspace/eCommerceJob/target/classes
+02:08:47 [INFO]
+02:08:47 [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ e-commerce ---
+02:08:47 [INFO] Using 'UTF-8' encoding to copy filtered resources.
+02:08:47 [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+02:08:47 [INFO] Copying 1 resource
+02:08:47 [INFO] Copying 2 resources
+02:08:47 [INFO]
+02:08:47 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ e-commerce ---
+02:08:47 [INFO] Changes detected - recompiling the module!
+02:08:47 [INFO] Compiling 29 source files to /var/jenkins_home/workspace/eCommerceJob/target/classes
+02:08:49 [INFO]
+02:08:49 [INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ e-commerce ---
+02:08:49 [INFO] Using 'UTF-8' encoding to copy filtered resources.
+02:08:49 [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+02:08:49 [INFO] Copying 1 resource
+02:08:49 [INFO]
+02:08:49 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ e-commerce ---
+02:08:49 [INFO] Changes detected - recompiling the module!
+02:08:49 [INFO] Compiling 9 source files to /var/jenkins_home/workspace/eCommerceJob/target/test-classes
+02:08:50 [INFO]
+02:08:50 [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ e-commerce ---
+02:08:50 [INFO]
+02:08:50 [INFO] -------------------------------------------------------
+02:08:50 [INFO]  T E S T S
+02:08:50 [INFO] -------------------------------------------------------
+02:08:53 [INFO] Running com.udacity.ecommerce.unit.AuthenticationTests
+02:08:53 [INFO] Running com.udacity.ecommerce.unit.AuthorizationTests
+02:08:53 00:08:53.667 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+02:08:53 00:08:53.684 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+02:08:53 00:08:53.711 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+02:08:53 00:08:53.724 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+02:08:53 00:08:53.759 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.udacity.ecommerce.unit.AuthenticationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+02:08:53 00:08:53.768 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.udacity.ecommerce.unit.AuthorizationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+02:08:53 00:08:53.778 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.AuthenticationTests], using SpringBootContextLoader
+02:08:53 00:08:53.786 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.udacity.ecommerce.unit.AuthenticationTests]: class path resource [com/udacity/ecommerce/unit/AuthenticationTests-context.xml] does not exist
+02:08:53 00:08:53.788 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.udacity.ecommerce.unit.AuthenticationTests]: class path resource [com/udacity/ecommerce/unit/AuthenticationTestsContext.groovy] does not exist
+02:08:53 00:08:53.794 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.udacity.ecommerce.unit.AuthenticationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:08:53 00:08:53.796 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.AuthenticationTests]: AuthenticationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:08:53 00:08:53.800 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.AuthorizationTests], using SpringBootContextLoader
+02:08:53 00:08:53.817 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.udacity.ecommerce.unit.AuthorizationTests]: class path resource [com/udacity/ecommerce/unit/AuthorizationTests-context.xml] does not exist
+02:08:53 00:08:53.828 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.udacity.ecommerce.unit.AuthorizationTests]: class path resource [com/udacity/ecommerce/unit/AuthorizationTestsContext.groovy] does not exist
+02:08:53 00:08:53.829 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.udacity.ecommerce.unit.AuthorizationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:08:53 00:08:53.832 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.AuthorizationTests]: AuthorizationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:08:53 00:08:53.985 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.udacity.ecommerce.unit.AuthorizationTests]
+02:08:54 00:08:54.036 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.udacity.ecommerce.unit.AuthenticationTests]
+02:08:54 00:08:54.149 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/eCommerceJob/target/classes/com/udacity/ecommerce/ECommerceApplication.class]
+02:08:54 00:08:54.157 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.AuthorizationTests
+02:08:54 00:08:54.274 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/eCommerceJob/target/classes/com/udacity/ecommerce/ECommerceApplication.class]
+02:08:54 00:08:54.279 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.AuthenticationTests
+02:08:54 00:08:54.377 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.udacity.ecommerce.unit.AuthorizationTests]: using defaults.
+02:08:54 00:08:54.378 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:08:54 00:08:54.411 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4189d70b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3fa2213, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3e7634b9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f0b0a5e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6035b93b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@320de594, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3dd1dc90, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@abf688e, org.springframework.test.context.event.EventPublishingTestExecutionListener@478ee483, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1a7288a3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2974f221, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@58fe0499, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@686449f9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@665df3c6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@68b6f0d6]
+02:08:54 00:08:54.444 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.udacity.ecommerce.unit.AuthenticationTests]: using defaults.
+02:08:54 00:08:54.446 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:08:54 00:08:54.477 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@476b0ae6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c6804cd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@655f7ea, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@549949be, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b3a45f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17a87e37, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3eeb318f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@20a14b55, org.springframework.test.context.event.EventPublishingTestExecutionListener@39ad977d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6da00fb9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a202ccb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20f12539, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@75b25825, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@18025ced, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@13cf7d52]
+02:08:54 00:08:54.490 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@478ee483 testClass = AuthenticationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1a7288a3 testClass = AuthenticationTests, locations = '{}', classes = '{class com.udacity.ecommerce.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[[ImportsContextCustomizer@2974f221 key = [@org.springframework.context.annotation.Import(value={org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.class}), @org.springframework.boot.context.properties.EnableConfigurationProperties(value={}), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.mockmvc", skip=NO), @org.springframework.context.annotation.Import(value={org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.class}), @org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc(webDriverEnabled=true, print=DEFAULT, webClientEnabled=true, addFilters=true, printOnlyOnFailure=true), @org.springframework.boot.autoconfigure.ImportAutoConfiguration(value={}, exclude={}, classes={}), @org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters(enabled=true), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.junit.jupiter.api.extension.ExtendWith(value={org.springframework.test.context.junit.jupiter.SpringExtension.class}), @org.springframework.boot.test.autoconfigure.properties.PropertyMapping(value="spring.test.jsontesters", skip=NO), @org.apiguardian.api.API(consumers={"*"}, since="5.0", status=STABLE), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=RANDOM_PORT, value={}, properties={}, classes={})]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@55c53a33, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5a37d3ed, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@ae328e86, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6c372fe6, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@398dada8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@bd404f5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@934b6cb, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6e171cd7], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]], class annotated with @DirtiesContext [false] with mode [null].
+02:08:54 00:08:54.492 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+02:08:54 00:08:54.557 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+02:08:55
+02:08:55   .   ____          _            __ _ _
+02:08:55  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:08:55 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:08:55  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:08:55   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:08:55  =========|_|==============|___/=/_/_/_/
+02:08:55
+02:08:55   .   ____          _            __ _ _
+02:08:55  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:08:55 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:08:55  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:08:55   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:08:55  =========|_|==============|___/=/_/_/_/
+02:08:55  :: Spring Boot ::                (v2.5.4)
+02:08:55
+02:08:55  :: Spring Boot ::                (v2.5.4)
+02:08:55
+02:08:55 2021-09-15 00:08:55.447  INFO 2849 --- [           main] c.u.ecommerce.unit.AuthorizationTests    : Starting AuthorizationTests using Java 11.0.12 on d837e3644844 with PID 2849 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:08:55 2021-09-15 00:08:55.475  INFO 2849 --- [           main] c.u.ecommerce.unit.AuthorizationTests    : No active profile set, falling back to default profiles: default
+02:08:55 2021-09-15 00:08:55.507  INFO 2851 --- [           main] c.u.ecommerce.unit.AuthenticationTests   : Starting AuthenticationTests using Java 11.0.12 on d837e3644844 with PID 2851 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:08:55 2021-09-15 00:08:55.523  INFO 2851 --- [           main] c.u.ecommerce.unit.AuthenticationTests   : No active profile set, falling back to default profiles: default
+02:08:57 2021-09-15 00:08:57.847  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:08:58 2021-09-15 00:08:58.050  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 177 ms. Found 4 JPA repository interfaces.
+02:08:58 2021-09-15 00:08:58.095  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:08:58 2021-09-15 00:08:58.420  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 298 ms. Found 4 JPA repository interfaces.
+02:09:02 2021-09-15 00:09:02.344  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:02 2021-09-15 00:09:02.371  INFO 2851 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:02 2021-09-15 00:09:02.372  INFO 2851 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:02 2021-09-15 00:09:02.430  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:02 2021-09-15 00:09:02.476  INFO 2849 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:02 2021-09-15 00:09:02.480  INFO 2849 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:02 2021-09-15 00:09:02.701  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:09:02 2021-09-15 00:09:02.702  INFO 2851 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7053 ms
+02:09:02 2021-09-15 00:09:02.872  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+02:09:02 2021-09-15 00:09:02.873  INFO 2849 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7327 ms
+02:09:03 2021-09-15 00:09:03.198  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:09:03 2021-09-15 00:09:03.496  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+02:09:07 2021-09-15 00:09:07.109  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:09:07 2021-09-15 00:09:07.424  INFO 2851 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:07 2021-09-15 00:09:07.571  INFO 2851 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+02:09:07 2021-09-15 00:09:07.639  INFO 2851 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+02:09:07 2021-09-15 00:09:07.825  INFO 2851 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:09 Hibernate: drop table if exists cart CASCADE
+02:09:09 Hibernate: drop table if exists cart_items CASCADE
+02:09:09 Hibernate: drop table if exists item CASCADE
+02:09:09 Hibernate: drop table if exists user CASCADE
+02:09:09 Hibernate: drop table if exists user_order CASCADE
+02:09:09 Hibernate: drop table if exists user_order_items CASCADE
+02:09:09 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:09 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:09 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:09 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:09 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:09 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:09 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:09 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:09 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:09 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:09 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:09 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:09 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:09 2021-09-15 00:09:09.424  INFO 2851 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:09 2021-09-15 00:09:09.439  INFO 2851 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:10 2021-09-15 00:09:10.600  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:11 2021-09-15 00:09:11.140  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+02:09:11 2021-09-15 00:09:11.259  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68aa1164, org.springframework.security.web.context.SecurityContextPersistenceFilter@71dfca65, org.springframework.security.web.header.HeaderWriterFilter@2fafa9bf, org.springframework.web.filter.CorsFilter@1188e08b, org.springframework.security.web.authentication.logout.LogoutFilter@341c0dfc, com.udacity.ecommerce.security.JWTAuthenticationFilter@12e13abd, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@5694f6a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f465ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@752fecbf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e0dec27, org.springframework.security.web.session.SessionManagementFilter@260fffec, org.springframework.security.web.access.ExceptionTranslationFilter@5478597, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1067bc4c]
+02:09:11 2021-09-15 00:09:11.547  INFO 2849 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:11 2021-09-15 00:09:11.708  INFO 2849 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+02:09:11 2021-09-15 00:09:11.900  INFO 2849 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+02:09:12 2021-09-15 00:09:12.307  INFO 2849 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:12 2021-09-15 00:09:12.630  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+02:09:12 2021-09-15 00:09:12.631  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:12 2021-09-15 00:09:12.634  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+02:09:12 2021-09-15 00:09:12.900  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 44915 (http) with context path ''
+02:09:12 2021-09-15 00:09:12.954  INFO 2851 --- [           main] c.u.ecommerce.unit.AuthenticationTests   : Started AuthenticationTests in 18.392 seconds (JVM running for 21.732)
+02:09:14 Hibernate: drop table if exists cart CASCADE
+02:09:14 Hibernate: drop table if exists cart_items CASCADE
+02:09:14 Hibernate: drop table if exists item CASCADE
+02:09:14 Hibernate: drop table if exists user CASCADE
+02:09:14 Hibernate: drop table if exists user_order CASCADE
+02:09:14 Hibernate: drop table if exists user_order_items CASCADE
+02:09:14 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:14 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:14 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:14 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:14 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:14 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:14 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:14 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:14 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:14 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.822 s - in com.udacity.ecommerce.unit.AuthenticationTests
+02:09:14 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:14 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:14 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:14 [INFO] Running com.udacity.ecommerce.unit.ItemControllerTests
+02:09:14 2021-09-15 00:09:14.412  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.ItemControllerTests], using SpringBootContextLoader
+02:09:14 2021-09-15 00:09:14.415  INFO 2851 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.udacity.ecommerce.unit.ItemControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:09:14 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:14 2021-09-15 00:09:14.418  INFO 2851 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.ItemControllerTests]: ItemControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:09:14 2021-09-15 00:09:14.498  INFO 2849 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:14 2021-09-15 00:09:14.443  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.ItemControllerTests
+02:09:14 2021-09-15 00:09:14.446  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:09:14 2021-09-15 00:09:14.521  INFO 2849 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:14 2021-09-15 00:09:14.447  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71979130, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3b2317b7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@56c26b21, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a72517e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77a14911, org.springframework.test.context.support.DirtiesContextTestExecutionListener@541c76fd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1142843c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3993cecb, org.springframework.test.context.event.EventPublishingTestExecutionListener@4407f129, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@731bdcca, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@76fdd5f1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@513fb873, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2a4a95c4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71ae1cb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1f50fe84]
+02:09:14
+02:09:14   .   ____          _            __ _ _
+02:09:14  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:09:14 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:09:14  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:09:14   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:09:14  =========|_|==============|___/=/_/_/_/
+02:09:14  :: Spring Boot ::                (v2.5.4)
+02:09:14
+02:09:14 2021-09-15 00:09:14.613  INFO 2851 --- [           main] c.u.ecommerce.unit.ItemControllerTests   : Starting ItemControllerTests using Java 11.0.12 on d837e3644844 with PID 2851 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:09:14 2021-09-15 00:09:14.616  INFO 2851 --- [           main] c.u.ecommerce.unit.ItemControllerTests   : No active profile set, falling back to default profiles: default
+02:09:15 2021-09-15 00:09:15.081  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:09:15 2021-09-15 00:09:15.112  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+02:09:15 2021-09-15 00:09:15.872  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:15 2021-09-15 00:09:15.873  INFO 2851 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:15 2021-09-15 00:09:15.879  INFO 2851 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:15 2021-09-15 00:09:15.953  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+02:09:15 2021-09-15 00:09:15.954  INFO 2851 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1333 ms
+02:09:16 2021-09-15 00:09:16.265  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+02:09:16 2021-09-15 00:09:16.288  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+02:09:16 2021-09-15 00:09:16.390  INFO 2851 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:16 2021-09-15 00:09:16.398  INFO 2851 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:16 Hibernate: drop table if exists cart CASCADE
+02:09:16 Hibernate: drop table if exists cart_items CASCADE
+02:09:16 Hibernate: drop table if exists item CASCADE
+02:09:16 Hibernate: drop table if exists user CASCADE
+02:09:16 Hibernate: drop table if exists user_order CASCADE
+02:09:16 Hibernate: drop table if exists user_order_items CASCADE
+02:09:16 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:16 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:16 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:16 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:16 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:16 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:16 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:16 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:16 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:16 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:16 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:16 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:16 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:16 2021-09-15 00:09:16.749  INFO 2851 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:16 2021-09-15 00:09:16.759  INFO 2851 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:16 2021-09-15 00:09:16.871  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:17 2021-09-15 00:09:17.271  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:17 2021-09-15 00:09:17.761  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53ec379a, org.springframework.security.web.context.SecurityContextPersistenceFilter@ece769a, org.springframework.security.web.header.HeaderWriterFilter@7937f96e, org.springframework.web.filter.CorsFilter@5f6dd89c, org.springframework.security.web.authentication.logout.LogoutFilter@5a004dd4, com.udacity.ecommerce.security.JWTAuthenticationFilter@606c2e4b, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@1b914e36, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7baf7a9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d95100f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29f3ea39, org.springframework.security.web.session.SessionManagementFilter@5599f22f, org.springframework.security.web.access.ExceptionTranslationFilter@209ab1d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ed2aa8a]
+02:09:17 2021-09-15 00:09:17.947  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ee1c29a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b7a0f18, org.springframework.security.web.header.HeaderWriterFilter@81cd90e, org.springframework.web.filter.CorsFilter@28d1b2f, org.springframework.security.web.authentication.logout.LogoutFilter@1e5190bd, com.udacity.ecommerce.security.JWTAuthenticationFilter@5f32de90, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@1181526e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79d3c655, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@345d641e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5134a7d6, org.springframework.security.web.session.SessionManagementFilter@69c6e5, org.springframework.security.web.access.ExceptionTranslationFilter@71c74011, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b7e4db6]
+02:09:18 2021-09-15 00:09:18.380  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+02:09:18 2021-09-15 00:09:18.381  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:18 2021-09-15 00:09:18.391  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+02:09:18 2021-09-15 00:09:18.469  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 38107 (http) with context path ''
+02:09:18 2021-09-15 00:09:18.475  INFO 2851 --- [           main] c.u.ecommerce.unit.ItemControllerTests   : Started ItemControllerTests in 4.019 seconds (JVM running for 27.254)
+02:09:18 2021-09-15 00:09:18.681  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemsByName|Request=(Name=Round)
+02:09:18 2021-09-15 00:09:18.682 ERROR 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemsByName|Response|Item Round doesn't exist
+02:09:18 2021-09-15 00:09:18.791  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItems|Request
+02:09:18 2021-09-15 00:09:18.809  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItems|Response=[Count=2]
+02:09:18 2021-09-15 00:09:18.890  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemById|Request=(ID=1)
+02:09:18 2021-09-15 00:09:18.891  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemById|Response=Item(id=1, name=Round Widget, price=1.99, description=A widget that is round)
+02:09:18 2021-09-15 00:09:18.919  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+02:09:18 2021-09-15 00:09:18.920  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:18 2021-09-15 00:09:18.926  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemsByName|Request=(Name=Round)
+02:09:18 2021-09-15 00:09:18.927  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemsByName|Response|[Count=1]
+02:09:18 2021-09-15 00:09:18.930  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+02:09:18 2021-09-15 00:09:18.955  INFO 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemById|Request=(ID=1)
+02:09:18 2021-09-15 00:09:18.956 ERROR 2851 --- [           main] c.u.e.controllers.ItemController         : GetItemById|Response|Item #1 doesn't exist
+02:09:19 [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.499 s - in com.udacity.ecommerce.unit.ItemControllerTests
+02:09:19 [INFO] Running com.udacity.ecommerce.unit.OrderControllerTests
+02:09:19 2021-09-15 00:09:18.999  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.OrderControllerTests], using SpringBootContextLoader
+02:09:19 2021-09-15 00:09:19.009  INFO 2851 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.udacity.ecommerce.unit.OrderControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:09:19 2021-09-15 00:09:19.009  INFO 2851 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.OrderControllerTests]: OrderControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:09:19 2021-09-15 00:09:19.013  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.OrderControllerTests
+02:09:19 2021-09-15 00:09:19.019  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:09:19 2021-09-15 00:09:19.038  INFO 2851 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f3cc2e0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@70ba01be, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2b3fd4d2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3020f22, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a40e660, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4a57ad67, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1f1b69bb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c730e65, org.springframework.test.context.event.EventPublishingTestExecutionListener@616d9a6d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@16263fb2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52b4da7c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4620e669, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4b93a232, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c6fdf5d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@187c8f96]
+02:09:19
+02:09:19   .   ____          _            __ _ _
+02:09:19  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:09:19 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:09:19  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:09:19   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:09:19  =========|_|==============|___/=/_/_/_/
+02:09:19  :: Spring Boot ::                (v2.5.4)
+02:09:19
+02:09:19 2021-09-15 00:09:19.094  INFO 2851 --- [           main] c.u.ecommerce.unit.OrderControllerTests  : Starting OrderControllerTests using Java 11.0.12 on d837e3644844 with PID 2851 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:09:19 2021-09-15 00:09:19.096  INFO 2851 --- [           main] c.u.ecommerce.unit.OrderControllerTests  : No active profile set, falling back to default profiles: default
+02:09:19 2021-09-15 00:09:19.136  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 40509 (http) with context path ''
+02:09:19 2021-09-15 00:09:19.154  INFO 2849 --- [           main] c.u.ecommerce.unit.AuthorizationTests    : Started AuthorizationTests in 24.644 seconds (JVM running for 27.942)
+02:09:19 2021-09-15 00:09:19.504  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:09:19 2021-09-15 00:09:19.526  INFO 2851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+02:09:19 2021-09-15 00:09:19.910  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindByUsername|Request=(Username=Sasa94s)
+02:09:19 2021-09-15 00:09:19.932  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindByUserName|Response=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le)
+02:09:20 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.578 s - in com.udacity.ecommerce.unit.AuthorizationTests
+02:09:20 [INFO] Running com.udacity.ecommerce.unit.CartControllerTests
+02:09:20 2021-09-15 00:09:20.178  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.CartControllerTests], using SpringBootContextLoader
+02:09:20 2021-09-15 00:09:20.181  INFO 2849 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.udacity.ecommerce.unit.CartControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:09:20 2021-09-15 00:09:20.184  INFO 2849 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.CartControllerTests]: CartControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:09:20 2021-09-15 00:09:20.197  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.CartControllerTests
+02:09:20 2021-09-15 00:09:20.203  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:09:20 2021-09-15 00:09:20.206  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@48dfce5c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@eccaf1b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3dceec83, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@74b13aa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31d09031, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a0f5567, org.springframework.test.context.transaction.TransactionalTestExecutionListener@106f0051, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fe687b5, org.springframework.test.context.event.EventPublishingTestExecutionListener@7a02d760, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5a86112a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3203ffa3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@49231d79, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@25f67aea, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f93303f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@62c02089]
+02:09:20
+02:09:20   .   ____          _            __ _ _
+02:09:20  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:09:20 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:09:20  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:09:20   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:09:20  =========|_|==============|___/=/_/_/_/
+02:09:20  :: Spring Boot ::                (v2.5.4)
+02:09:20
+02:09:20 2021-09-15 00:09:20.301  INFO 2849 --- [           main] c.u.ecommerce.unit.CartControllerTests   : Starting CartControllerTests using Java 11.0.12 on d837e3644844 with PID 2849 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:09:20 2021-09-15 00:09:20.305  INFO 2849 --- [           main] c.u.ecommerce.unit.CartControllerTests   : No active profile set, falling back to default profiles: default
+02:09:20 2021-09-15 00:09:20.392  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:20 2021-09-15 00:09:20.399  INFO 2851 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:20 2021-09-15 00:09:20.400  INFO 2851 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:20 2021-09-15 00:09:20.433  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+02:09:20 2021-09-15 00:09:20.433  INFO 2851 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1314 ms
+02:09:20 2021-09-15 00:09:20.593  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+02:09:20 2021-09-15 00:09:20.607  INFO 2851 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+02:09:20 2021-09-15 00:09:20.683  INFO 2851 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:20 2021-09-15 00:09:20.693  INFO 2851 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:20 2021-09-15 00:09:20.774  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:09:20 2021-09-15 00:09:20.823  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
+02:09:20 Hibernate: drop table if exists cart CASCADE
+02:09:20 Hibernate: drop table if exists cart_items CASCADE
+02:09:20 Hibernate: drop table if exists item CASCADE
+02:09:20 Hibernate: drop table if exists user CASCADE
+02:09:20 Hibernate: drop table if exists user_order CASCADE
+02:09:20 Hibernate: drop table if exists user_order_items CASCADE
+02:09:20 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:20 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:20 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:20 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:20 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:20 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:20 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:20 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:20 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:20 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:20 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:20 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:20 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:20 2021-09-15 00:09:20.888  INFO 2851 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:20 2021-09-15 00:09:20.899  INFO 2851 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:21 2021-09-15 00:09:21.229  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:21 2021-09-15 00:09:21.648  INFO 2851 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23c3f787, org.springframework.security.web.context.SecurityContextPersistenceFilter@76093fa9, org.springframework.security.web.header.HeaderWriterFilter@536d153b, org.springframework.web.filter.CorsFilter@3c82bcbd, org.springframework.security.web.authentication.logout.LogoutFilter@75364777, com.udacity.ecommerce.security.JWTAuthenticationFilter@776ae580, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@6b0bcea5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@547d3e8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f823df7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5748638c, org.springframework.security.web.session.SessionManagementFilter@25e01756, org.springframework.security.web.access.ExceptionTranslationFilter@7f5ba1bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56394880]
+02:09:21 2021-09-15 00:09:21.812  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:21 2021-09-15 00:09:21.814  INFO 2849 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:21 2021-09-15 00:09:21.815  INFO 2849 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:21 2021-09-15 00:09:21.844  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+02:09:21 2021-09-15 00:09:21.844  INFO 2849 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1535 ms
+02:09:22 2021-09-15 00:09:22.068  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+02:09:22 2021-09-15 00:09:22.148  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+02:09:22 2021-09-15 00:09:22.197  INFO 2851 --- [           main] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+02:09:22 2021-09-15 00:09:22.198  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:22 2021-09-15 00:09:22.200  INFO 2851 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+02:09:22 2021-09-15 00:09:22.202  INFO 2849 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:22 2021-09-15 00:09:22.210  INFO 2849 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:22 2021-09-15 00:09:22.261  INFO 2851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 38441 (http) with context path ''
+02:09:22 2021-09-15 00:09:22.269  INFO 2851 --- [           main] c.u.ecommerce.unit.OrderControllerTests  : Started OrderControllerTests in 3.228 seconds (JVM running for 31.048)
+02:09:22 2021-09-15 00:09:22.336  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : Submit|Request=(Username=Sasa94s)
+02:09:22 2021-09-15 00:09:22.345  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : Submit|Response=UserOrder(id=null, user=User(id=null, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le), total=0)
+02:09:22 2021-09-15 00:09:22.442  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : GetOrdersForUser|Request=(Username=Sasa94s)
+02:09:22 2021-09-15 00:09:22.444  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : Submit|Response=[Count=1]
+02:09:22 Hibernate: drop table if exists cart CASCADE
+02:09:22 Hibernate: drop table if exists cart_items CASCADE
+02:09:22 Hibernate: drop table if exists item CASCADE
+02:09:22 Hibernate: drop table if exists user CASCADE
+02:09:22 Hibernate: drop table if exists user_order CASCADE
+02:09:22 Hibernate: drop table if exists user_order_items CASCADE
+02:09:22 2021-09-15 00:09:22.471  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : GetOrdersForUser|Request=(Username=Sasa94s)
+02:09:22 2021-09-15 00:09:22.472 ERROR 2851 --- [           main] c.u.e.controllers.OrderController        : GetOrdersForUser|Response|Sasa94s User doesn't exist
+02:09:22 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:22 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:22 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:22 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:22 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:22 2021-09-15 00:09:22.504  INFO 2851 --- [           main] c.u.e.controllers.OrderController        : Submit|Request=(Username=Sasa94s)
+02:09:22 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:22 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:22 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:22 2021-09-15 00:09:22.513 ERROR 2851 --- [           main] c.u.e.controllers.OrderController        : Submit|Response|Sasa94s User doesn't exist
+02:09:22 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:22 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:22 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:22 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:22 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:22 [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.513 s - in com.udacity.ecommerce.unit.OrderControllerTests
+02:09:22 2021-09-15 00:09:22.537  INFO 2849 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:22 2021-09-15 00:09:22.538  INFO 2849 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:22 2021-09-15 00:09:22.693  INFO 2851 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+02:09:22 2021-09-15 00:09:22.694  INFO 2851 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:09:22 Hibernate: drop table if exists cart CASCADE
+02:09:22 Hibernate: drop table if exists cart_items CASCADE
+02:09:22 Hibernate: drop table if exists item CASCADE
+02:09:22 Hibernate: drop table if exists user CASCADE
+02:09:22 Hibernate: drop table if exists user_order CASCADE
+02:09:22 Hibernate: drop table if exists user_order_items CASCADE
+02:09:22 2021-09-15 00:09:22.751  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:09:22 2021-09-15 00:09:22.849  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:09:22 2021-09-15 00:09:22.874  INFO 2851 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+02:09:22 2021-09-15 00:09:22.878  INFO 2851 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:09:22 Hibernate: drop table if exists cart CASCADE
+02:09:22 2021-09-15 00:09:22.976  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:23 2021-09-15 00:09:23.375  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16d31c48, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a2b1f24, org.springframework.security.web.header.HeaderWriterFilter@3e455d01, org.springframework.web.filter.CorsFilter@783a35d8, org.springframework.security.web.authentication.logout.LogoutFilter@2afe263, com.udacity.ecommerce.security.JWTAuthenticationFilter@38821ada, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@2ab40d2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72d2470, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1314ccc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@240b656f, org.springframework.security.web.session.SessionManagementFilter@6d13cd6d, org.springframework.security.web.access.ExceptionTranslationFilter@24032706, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2746bc43]
+02:09:23 2021-09-15 00:09:23.607  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+02:09:23 2021-09-15 00:09:23.608  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:23 2021-09-15 00:09:23.610  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+02:09:23 2021-09-15 00:09:23.633  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 35623 (http) with context path ''
+02:09:23 2021-09-15 00:09:23.640  INFO 2849 --- [           main] c.u.ecommerce.unit.CartControllerTests   : Started CartControllerTests in 3.419 seconds (JVM running for 32.428)
+02:09:23 2021-09-15 00:09:23.741  INFO 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Request=ModifyCartRequest(username=Sasa94s, itemId=1, quantity=1)
+02:09:23 2021-09-15 00:09:23.743 ERROR 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Response|Item #1 doesn't exist
+02:09:23 2021-09-15 00:09:23.766  INFO 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Request=ModifyCartRequest(username=Sasa94s, itemId=2, quantity=1)
+02:09:23 2021-09-15 00:09:23.770  INFO 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Response=Cart(id=1, user=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le), total=3.99)
+02:09:23 2021-09-15 00:09:23.820  INFO 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Request=ModifyCartRequest(username=Sasa94s, itemId=1, quantity=1)
+02:09:23 2021-09-15 00:09:23.821 ERROR 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Response|Sasa94s User doesn't exist
+02:09:23 2021-09-15 00:09:23.845  INFO 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Request=ModifyCartRequest(username=Sasa94s, itemId=1, quantity=1)
+02:09:23 2021-09-15 00:09:23.846 ERROR 2849 --- [           main] c.u.e.controllers.CartController         : AddToCart|Response|Item #1 doesn't exist
+02:09:23 2021-09-15 00:09:23.870  INFO 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Request=ModifyCartRequest(username=Sasa94s, itemId=1, quantity=1)
+02:09:23 2021-09-15 00:09:23.870 ERROR 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Response|Sasa94s User doesn't exist
+02:09:23 2021-09-15 00:09:23.894  INFO 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Request=ModifyCartRequest(username=Sasa94s, itemId=1, quantity=1)
+02:09:23 2021-09-15 00:09:23.896  INFO 2849 --- [           main] c.u.e.controllers.CartController         : RemoveFromCart|Response=Cart(id=1, user=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le), total=3.99)
+02:09:23 [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.731 s - in com.udacity.ecommerce.unit.CartControllerTests
+02:09:23 [INFO] Running com.udacity.ecommerce.unit.UserControllerTests
+02:09:23 2021-09-15 00:09:23.911  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.udacity.ecommerce.unit.UserControllerTests], using SpringBootContextLoader
+02:09:23 2021-09-15 00:09:23.912  INFO 2849 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.udacity.ecommerce.unit.UserControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:09:23 2021-09-15 00:09:23.912  INFO 2849 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.udacity.ecommerce.unit.UserControllerTests]: UserControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:09:23 2021-09-15 00:09:23.915  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.udacity.ecommerce.ECommerceApplication for test class com.udacity.ecommerce.unit.UserControllerTests
+02:09:23 2021-09-15 00:09:23.918  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:09:23 2021-09-15 00:09:23.919  INFO 2849 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ab90b8c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@640a80aa, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1d4ee936, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7410c197, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@363751f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@688884e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c65c6f0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1e0bae92, org.springframework.test.context.event.EventPublishingTestExecutionListener@123fd460, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5037f491, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1227ea21, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@511ba9c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3debeb5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5297030e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7fcc8d9f]
+02:09:23
+02:09:23   .   ____          _            __ _ _
+02:09:23  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+02:09:23 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+02:09:23  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+02:09:23   '  |____| .__|_| |_|_| |_\__, | / / / /
+02:09:23  =========|_|==============|___/=/_/_/_/
+02:09:23  :: Spring Boot ::                (v2.5.4)
+02:09:23
+02:09:23 2021-09-15 00:09:23.963  INFO 2849 --- [           main] c.u.ecommerce.unit.UserControllerTests   : Starting UserControllerTests using Java 11.0.12 on d837e3644844 with PID 2849 (started by root in /var/jenkins_home/workspace/eCommerceJob)
+02:09:23 2021-09-15 00:09:23.965  INFO 2849 --- [           main] c.u.ecommerce.unit.UserControllerTests   : No active profile set, falling back to default profiles: default
+02:09:24 Hibernate: drop table if exists cart_items CASCADE
+02:09:24 Hibernate: drop table if exists item CASCADE
+02:09:24 Hibernate: drop table if exists user CASCADE
+02:09:24 Hibernate: drop table if exists user_order CASCADE
+02:09:24 Hibernate: drop table if exists user_order_items CASCADE
+02:09:24 2021-09-15 00:09:24.224  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+02:09:24 2021-09-15 00:09:24.224  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:09:24 2021-09-15 00:09:24.237  INFO 2849 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+02:09:24 2021-09-15 00:09:24.513  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+02:09:24 2021-09-15 00:09:24.515  INFO 2849 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+02:09:24 2021-09-15 00:09:24.515  INFO 2849 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+02:09:24 2021-09-15 00:09:24.513  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+02:09:24 2021-09-15 00:09:24.538  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+02:09:24 2021-09-15 00:09:24.539  INFO 2849 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 570 ms
+02:09:24 2021-09-15 00:09:24.546  INFO 2851 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+02:09:24 2021-09-15 00:09:24.547  INFO 2851 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:09:24 Hibernate: drop table if exists cart CASCADE
+02:09:24 Hibernate: drop table if exists cart_items CASCADE
+02:09:24 Hibernate: drop table if exists item CASCADE
+02:09:24 Hibernate: drop table if exists user CASCADE
+02:09:24 Hibernate: drop table if exists user_order CASCADE
+02:09:24 Hibernate: drop table if exists user_order_items CASCADE
+02:09:24 2021-09-15 00:09:24.656  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+02:09:24 2021-09-15 00:09:24.732  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+02:09:24 2021-09-15 00:09:24.753  INFO 2851 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+02:09:26 2021-09-15 00:09:26.215  INFO 2849 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+02:09:26 2021-09-15 00:09:26.260  INFO 2849 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+02:09:26 2021-09-15 00:09:26.267  INFO 2849 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+02:09:26 Hibernate: drop table if exists cart CASCADE
+02:09:26 Hibernate: drop table if exists cart_items CASCADE
+02:09:26 Hibernate: drop table if exists item CASCADE
+02:09:26 Hibernate: drop table if exists user CASCADE
+02:09:26 Hibernate: drop table if exists user_order CASCADE
+02:09:26 Hibernate: drop table if exists user_order_items CASCADE
+02:09:26 Hibernate: create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+02:09:26 Hibernate: create table cart_items (cart_id bigint not null, items_id bigint not null)
+02:09:26 Hibernate: create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+02:09:26 Hibernate: create table user (id bigint generated by default as identity, password varchar(255) not null, salt varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+02:09:26 Hibernate: create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+02:09:26 Hibernate: create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+02:09:26 Hibernate: alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+02:09:26 Hibernate: alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+02:09:26 Hibernate: alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+02:09:26 Hibernate: alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+02:09:26 Hibernate: alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+02:09:26 Hibernate: alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+02:09:26 Hibernate: alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+02:09:26 2021-09-15 00:09:26.447  INFO 2849 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:09:26 2021-09-15 00:09:26.448  INFO 2849 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:09:26 2021-09-15 00:09:26.848  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/user/create'] with []
+02:09:27 2021-09-15 00:09:27.246  INFO 2849 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@398a27e, org.springframework.security.web.context.SecurityContextPersistenceFilter@19fdcaba, org.springframework.security.web.header.HeaderWriterFilter@71ea9a0d, org.springframework.web.filter.CorsFilter@7beb2bc2, org.springframework.security.web.authentication.logout.LogoutFilter@575a6540, com.udacity.ecommerce.security.JWTAuthenticationFilter@28d07fa4, com.udacity.ecommerce.security.JWTAuthenticationVerificationFilter@298990ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35738a92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10ec54c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fc44cb6, org.springframework.security.web.session.SessionManagementFilter@62ba4c62, org.springframework.security.web.access.ExceptionTranslationFilter@62a9d176, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d099a37]
+02:09:27 2021-09-15 00:09:27.698  INFO 2849 --- [           main] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+02:09:27 2021-09-15 00:09:27.698  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+02:09:27 2021-09-15 00:09:27.702  INFO 2849 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+02:09:27 2021-09-15 00:09:27.743  INFO 2849 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 42087 (http) with context path ''
+02:09:27 2021-09-15 00:09:27.749  INFO 2849 --- [           main] c.u.ecommerce.unit.UserControllerTests   : Started UserControllerTests in 3.826 seconds (JVM running for 36.536)
+02:09:27 2021-09-15 00:09:27.798  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindById|Request=(ID=1)
+02:09:27 2021-09-15 00:09:27.801  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindById|Response=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le)
+02:09:27 2021-09-15 00:09:27.824  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindByUsername|Request=(Username=Sasa94s)
+02:09:27 2021-09-15 00:09:27.826 ERROR 2849 --- [           main] c.u.e.controllers.UserController         : FindByUserName|Response|Sasa94s User doesn't exist
+02:09:27 2021-09-15 00:09:27.922  INFO 2849 --- [           main] c.u.e.controllers.UserController         : CreateUser|Request=CreateUserRequest(username=Sasa94s, password=passw0rD!, confirmPassword=passw0rD!)
+02:09:28 2021-09-15 00:09:28.133  INFO 2849 --- [           main] c.u.e.controllers.UserController         : CreateUser|Response=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le)
+02:09:28 2021-09-15 00:09:28.186  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindById|Request=(ID=1)
+02:09:28 2021-09-15 00:09:28.187 ERROR 2849 --- [           main] c.u.e.controllers.UserController         : FindById|Response|User #1 doesn't exist
+02:09:28 2021-09-15 00:09:28.199  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindByUsername|Request=(Username=Sasa94s)
+02:09:28 2021-09-15 00:09:28.199  INFO 2849 --- [           main] c.u.e.controllers.UserController         : FindByUserName|Response=User(id=1, username=Sasa94s, password=$2a$10$j.dv523AuPF0nZQLBEU1LeDFzccOmfu/fisrHVZax7GaJ01e2ENbe, salt=$2a$10$j.dv523AuPF0nZQLBEU1Le)
+02:09:28 2021-09-15 00:09:28.212  INFO 2849 --- [           main] c.u.e.controllers.UserController         : CreateUser|Request=CreateUserRequest(username=Sasa94s, password=passw0rD!, confirmPassword=passw0rD!)
+02:09:28 2021-09-15 00:09:28.213 ERROR 2849 --- [           main] c.u.e.controllers.UserController         : CreateUser|Response|Sasa94s User already exists
+02:09:28 [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.3 s - in com.udacity.ecommerce.unit.UserControllerTests
+02:09:28 2021-09-15 00:09:28.272  INFO 2849 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+02:09:28 2021-09-15 00:09:28.277  INFO 2849 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:09:28 Hibernate: drop table if exists cart CASCADE
+02:09:28 Hibernate: drop table if exists cart_items CASCADE
+02:09:28 Hibernate: drop table if exists item CASCADE
+02:09:28 Hibernate: drop table if exists user CASCADE
+02:09:28 Hibernate: drop table if exists user_order CASCADE
+02:09:28 Hibernate: drop table if exists user_order_items CASCADE
+02:09:28 2021-09-15 00:09:28.363  INFO 2849 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+02:09:28 2021-09-15 00:09:28.442  INFO 2849 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+02:09:28 2021-09-15 00:09:28.467  INFO 2849 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+02:09:28 2021-09-15 00:09:28.468  INFO 2849 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:09:28 Hibernate: drop table if exists cart CASCADE
+02:09:58 [INFO]
+02:09:58 [INFO] Results:
+02:09:58 [INFO]
+02:09:58 [INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0
+02:09:58 [INFO]
+02:09:58 [INFO]
+02:09:58 [INFO] --- maven-war-plugin:3.3.1:war (default-war) @ e-commerce ---
+02:09:58 [INFO] Packaging webapp
+02:09:58 [INFO] Assembling webapp [e-commerce] in [/var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT]
+02:09:58 [INFO] Processing war project
+02:09:59 [INFO] Building war: /var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT.war
+02:10:00 [INFO]
+02:10:00 [INFO] --- spring-boot-maven-plugin:2.5.4:repackage (repackage) @ e-commerce ---
+02:10:01 [INFO] Replacing main artifact with repackaged archive
+02:10:01 [INFO] ------------------------------------------------------------------------
+02:10:01 [INFO] BUILD SUCCESS
+02:10:01 [INFO] ------------------------------------------------------------------------
+02:10:01 [INFO] Total time:  01:18 min
+02:10:01 [INFO] Finished at: 2021-09-15T00:10:01Z
+02:10:01 [INFO] ------------------------------------------------------------------------
+02:10:01 [DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+02:10:01 [DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context eCommerceApp
+02:10:02   Redeploying [/var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT.war]
+02:10:02   Undeploying [/var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT.war]
+02:10:02   Deploying [/var/jenkins_home/workspace/eCommerceJob/target/e-commerce-0.0.1-SNAPSHOT.war]
+02:10:05 Finished: SUCCESS
