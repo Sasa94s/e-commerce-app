@@ -25,7 +25,7 @@ public class AuthorizationTests extends SecuredAbstractTests {
         User user = getUser(ID);
         mvc.perform(
                         get("/api/user/{username}", user.getUsername()))
-                .andExpect(status().isForbidden());
+                .andExpect(status().isUnauthorized());
     }
 
     @SneakyThrows
