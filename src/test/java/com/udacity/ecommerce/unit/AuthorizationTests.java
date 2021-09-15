@@ -32,9 +32,7 @@ public class AuthorizationTests extends SecuredAbstractTests {
     @Test
     public void testSecuredEndpointWithInvalidToken() {
         User user = getUser(ID);
-        String invalidToken = jwtService
-                .createToken(user.getUsername())
-                .replace("s", "d");
+        String invalidToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
         mvc.perform(
                         get("/api/user/{username}", user.getUsername())
                                 .header("Authorization", String.format("Bearer %s", invalidToken)))
