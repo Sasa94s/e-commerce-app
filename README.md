@@ -72,3 +72,7 @@ Unit tests is implemented demonstrating 86% code coverage.
 |`com.udacity.ecommerce.model`|92% (13/14)|85% (64/75)|82% (88/107)|0% (0/20)
 |`com.udacity.ecommerce.security`|75% (6/8)|83% (15/18)|73% (68/92)|12% (1/8)
 |`com.udacity.ecommerce.service`|100% (1/1)|50% (1/2)|20% (1/5)|100% (0/0)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
