@@ -32,7 +32,7 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    @JsonProperty
+    @JsonIgnore
     private String salt;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
