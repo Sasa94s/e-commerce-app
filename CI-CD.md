@@ -3,6 +3,8 @@
 Install Jenkins and Tomcat in separate containers residing on the same host EC2 instance. This is a step-by-step guide
 that can be applied either on AWS EC2 or locally.
 
+![Architecture](./ci-cd/images/architecture.png)
+
 ## Jenkins Setup
 
 ### Instructions
